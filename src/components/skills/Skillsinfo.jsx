@@ -11,29 +11,27 @@ const Skillsinfo = () => {
         <SectionTitle title="Skills" subtitle="Skills" />
 
         <div className="inner-content">
-          {/* Описание */}
+          {/* Description */}
           <div
             className="skills-description"
             style={{ opacity: 1, transform: "none" }}
           >
             <h3>Education & Skills</h3>
             <p>
-              Более 10 лет в IT, работал и над проектами связанными с
-              администрированием ПО, так же обслуживание
+              Over 10 years in IT, working on projects related to software
+              administration, maintenance, and infrastructure support.
             </p>
           </div>
 
-          {/* Блок с образованием, скиллами и наградами */}
+          {/* Education, Skills and Awards */}
           <div className="skills-info education-all">
-            {/* Образование */}
+            {/* Education and Skills */}
             <div style={{ opacity: 1, transform: "none" }}>
               <Education />
               <Skills />
             </div>
 
-            {/* Навыки */}
-
-            {/* Награды или достижения */}
+            {/* Awards or Achievements */}
             <div style={{ opacity: 1, transform: "none" }}>
               <div className="education">
                 <h4 className="label">Professional Skills Summary</h4>
@@ -51,7 +49,7 @@ const Skillsinfo = () => {
             </div>
           </div>
 
-          {/* Опыт работы */}
+          {/* Work & Experience */}
           <div className="education work-exp">
             <h3
               className="work-exp-title"
@@ -60,45 +58,57 @@ const Skillsinfo = () => {
               Work & Experience
             </h3>
             <div className="skills-info">
+              {/* Corporate Website */}
               <div className="experience-card">
                 <div className="upper">
-                  <h3>Sr. Graphic Designer</h3>
-                  <h5>Part Time | Office</h5>
-                  <span>2020 - 2021</span>
+                  <h3>Corporate Website</h3>
+                  <h5>Full Time | Office</h5>
+                  <span>2023 – Present</span>
                 </div>
                 <div className="hr"></div>
-                <h4 className="label">Avada Theme</h4>
+                <h4 className="label">ucell.uz</h4>
                 <p>
-                  I design and develop services for customers of all sizes,
-                  specializing in creating stylish, modern websites.
+                  Managing the official <strong>ucell.uz</strong> website hosted
+                  in
+                  <strong> Kubernetes</strong>. Migrated infrastructure to
+                  containerized architecture with implemented{" "}
+                  <strong>CI/CD pipelines</strong> to ensure high availability
+                  and scalability.
                 </p>
               </div>
 
+              {/* Customer Portal */}
               <div className="experience-card">
                 <div className="upper">
-                  <h3>Cr. Web Developer</h3>
-                  <h5>Full Time | InHouse</h5>
-                  <span>2019 - 2020</span>
-                </div>
-                <div className="hr"></div>
-                <h4 className="label">ib-themes ltd.</h4>
-                <p>
-                  I design and develop services for customers of all sizes,
-                  specializing in creating stylish, modern websites.
-                </p>
-              </div>
-
-              <div className="experience-card">
-                <div className="upper">
-                  <h3>Jr. Web Developer</h3>
+                  <h3>Customer Portal</h3>
                   <h5>Full Time | Remote</h5>
-                  <span>2018 - 2019</span>
+                  <span>2023 – Present</span>
                 </div>
                 <div className="hr"></div>
-                <h4 className="label">Creative Gigs</h4>
+                <h4 className="label">lc.ucell.uz</h4>
                 <p>
-                  I design and develop services for customers of all sizes,
-                  specializing in creating stylish, modern websites.
+                  Fully migrated the <strong>personal account system</strong> to
+                  <strong> CI/CD</strong> and containerization. Maintaining
+                  stability, releasing features, and supporting development
+                  teams.
+                </p>
+              </div>
+
+              {/* Mobile Application */}
+              <div className="experience-card">
+                <div className="upper">
+                  <h3>Mobile Application</h3>
+                  <h5>Full Time | Office</h5>
+                  <span>2023 – Present</span>
+                </div>
+                <div className="hr"></div>
+                <h4 className="label">UCELL App</h4>
+                <p>
+                  Supporting multiple microservices running in{" "}
+                  <strong>Kubernetes</strong>. Working on services related to{" "}
+                  <strong>auth</strong>,<strong> payments</strong>, and{" "}
+                  <strong>user profile</strong>. Implemented centralized logging
+                  and monitoring.
                 </p>
               </div>
             </div>

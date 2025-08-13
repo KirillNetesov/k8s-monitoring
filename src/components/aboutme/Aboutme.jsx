@@ -3,6 +3,7 @@ import { aboutImg } from "../../assets/images";
 import { FaDownload } from "react-icons/fa";
 import SectionTitle from "../sectionTitle/SectionTitle";
 import "./Aboutme.css";
+import { FaArrowDown } from "react-icons/fa6";
 
 const Aboutme = () => {
   return (
@@ -42,8 +43,8 @@ const Aboutme = () => {
               </li>
             </ul>
 
-            <a href="#" className="inner-info-link">
-              Скачать <FaDownload />
+            <a href="/path/to/your_resume.pdf" download className="btn">
+              Скачать <span role="img" aria-label="download"></span>
             </a>
           </div>
         </div>

@@ -5,7 +5,6 @@ import {
   FaGithub,
   FaArrowCircleRight,
 } from "react-icons/fa";
-import { FaArrowDown } from "react-icons/fa6";
 
 const Home = () => {
   return (
@@ -23,22 +22,6 @@ const Home = () => {
           </a>
         </div>
       </div>
-
-      <div className="home-info">
-        <h1>Привет, меня зовут Кирилл Нетёсов</h1>
-        <h3>Я работаю SRE инжинером</h3>
-        <p>
-          Мы создаем большие проекты в крупном мобильном операторе Узбекистана
-          UCELL, я веду проект веб сайт ucell.uz
-        </p>
-        <a href="" className="home-info-link inner-info-link">
-          Contact me <FaArrowCircleRight />
-        </a>
-      </div>
-
-      <a href="#about" className="scroll-down">
-        Прокрутить <FaArrowDown />
-      </a>
     </section>
   );
 };

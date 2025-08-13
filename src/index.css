@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-
+html, body, #root {
+  height: 100%;
+}
 :root {
  /*=======Main theme colors=======*/
   --first-color: #0e2431;
@@ -159,32 +161,6 @@ body {
 }
 
 /* ======= theme button Light/Dark ======= */
-.them-btn {
-  position: fixed;
-  z-index: 11;
-  right: 0;
-  top: 150px;
-  background: var(--bg-transparent-color-01);
-  backdrop-filter: blur(20px);
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
-  border-radius: 5px 0 0 5px;
-  box-shadow: var(--box-shadow);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.them-btn .fa-sun,
-.them-btn.sun .fa-moon {
-  display: none;
-}
-
-.them-btn.sun .fa-sun {
-  display: block;
-}
 
 /*=======Scroll bar=======*/
 ::-webkit-scrollbar{
@@ -203,4 +179,62 @@ body {
 
 main {
   flex: 1;
+}
+.theme-toggle {
+  position: fixed;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  background-color: var(--card-bg-color);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--second-color);
+  color: white;
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  color: var(--text-color);
+}
+body.dark-mode {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p {
+  color: #f1f5f9;
+}
+
+body.dark-mode .container {
+  background-color: #1e293b;
+}
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1f2937;
+  --text-color: #f9fafb;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
 }

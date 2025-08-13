@@ -11,6 +11,7 @@ import {
   Aboutme,
   Skillsinfo,
 } from "./components/index";
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
   return (
@@ -18,9 +19,8 @@ function App() {
       <Header />
       <main>
         <Home />
-        <div className="container">
-          <h3>Резюме Kirill Netesov</h3>
-        </div>
+        <ThemeToggle />
+        <div className="container"></div>
         <div>
           <Aboutme />
           <Skillsinfo />
