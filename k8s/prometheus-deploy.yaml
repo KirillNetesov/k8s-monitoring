@@ -10,7 +10,7 @@ data:
 
     scrape_configs:
       - job_name: 'prometheus'
-        metrics_path: /prometheus/metrics
+        metrics_path: /metrics
         static_configs:
           - targets: ['localhost:9090']
 
@@ -22,14 +22,13 @@ data:
         static_configs:
           - targets: ['kube-state-metrics.monitoring.svc.cluster.local:8080']
 
-      - job_name: 'fluent-bit'
-        metrics_path: /metrics
-        static_configs:
-          - targets: ['fluent-bit-metrics.monitoring.svc.cluster.local:2020']
-
       - job_name: 'victoria-metrics'
         static_configs:
           - targets: ['victoria-metrics.monitoring.svc.cluster.local:8428']
+
+      - job_name: 'nginx'
+        static_configs:
+          - targets: ['nginx-exporter.monitoring.svc.cluster.local:9113']
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -52,8 +51,6 @@ spec:
         args:
           - "--config.file=/etc/prometheus/prometheus.yml"
           - "--storage.tsdb.path=/prometheus/"
-          - "--web.external-url=http://192.168.142.129.nip.io/prometheus"
-          - "--web.route-prefix=/prometheus"
         ports:
           - containerPort: 9090
         volumeMounts:
@@ -63,7 +60,6 @@ spec:
         - name: prometheus-config
           configMap:
             name: prometheus-config
-
 ---
 apiVersion: v1
 kind: Service
