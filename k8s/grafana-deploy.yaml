@@ -46,7 +46,7 @@ data:
         editable: true
         updateIntervalSeconds: 30
         options:
-          path: /etc/grafana/provisioning/dashboards
+          path: /var/lib/grafana/dashboards
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -142,7 +142,7 @@ spec:
             - name: grafana-dashboards
               mountPath: /etc/grafana/provisioning/dashboards
             - name: grafana-dashboard-definitions
-              mountPath: /etc/grafana/provisioning/dashboards/json
+              mountPath: /var/lib/grafana/dashboards
       volumes:
         - name: grafana-storage
           persistentVolumeClaim:
