@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: react-site
-        image: my-react-site:latest  
-        imagePullPolicy: IfNotPresent 
+        image: my-react-site:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
 
@@ -31,4 +31,4 @@ spec:
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 30081  
+      nodePort: 30091
